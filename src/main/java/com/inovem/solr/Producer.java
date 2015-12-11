@@ -10,6 +10,11 @@ class Producer implements Runnable {
 	}
 
 	public void run() {
-		
+		try {
+			for (int i = 0; i < 1000; ++i) {
+				StringDoc doc = new StringDoc("Number-" + i);
+				queue.put(doc);
+			}
+		} catch (Exception e) { e.printStackTrace(); }
 	}
 }

@@ -27,10 +27,20 @@ class Consumer implements Runnable {
 				}
 
 				// Process Doc and update localCounts
-
+				System.out.println(doc.getText());
+				incrementCount("Count");
 			}
 			mergeCounts();
 		} catch (Exception e) { e.printStackTrace(); }	
+	}
+
+	private void incrementCount(String word) {
+		Integer currCount = localCounts.get(word);
+		if (currCount == null) {
+			localCounts.put(word, 1);
+		} else {
+			localCounts.put(word, currCount+1);
+		}
 	}
 
 	private void mergeCounts() {
