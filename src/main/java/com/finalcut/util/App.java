@@ -1,4 +1,4 @@
-package com.inovem.solr;
+package com.finalcut.util;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

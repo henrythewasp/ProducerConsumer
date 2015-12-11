@@ -1,4 +1,4 @@
-package com.inovem.solr;
+package com.finalcut.util;
 
 class StringDoc extends Doc {
 	private String text;
